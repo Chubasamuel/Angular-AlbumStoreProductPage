@@ -15,6 +15,6 @@ return this._http.get(this._albumUrl).map(response=>response.json()<Album>);
 };
 getProducts():Observable<Product[]>{
 return this._http.get(this._productsUrl).map(
-	response=>response.json()<Product[]>);
+	response=><Product[]>response.json();
 };
 };
